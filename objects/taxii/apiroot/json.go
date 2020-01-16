@@ -13,14 +13,15 @@ import (
 // Public Functions - JSON Decoder
 // ----------------------------------------------------------------------
 
-/* Decode - This function is a simple wrapper for decoding JSON data. It will
+/*
+Decode - This function is a simple wrapper for decoding JSON data. It will
 decode a slice of bytes into an actual struct and return a pointer to that
-object along with any errors. */
+object along with any errors.
+*/
 func Decode(data []byte) (*APIRoot, error) {
 	var o APIRoot
 
-	err := json.Unmarshal(data, &o)
-	if err != nil {
+	if err := json.Unmarshal(data, &o); err != nil {
 		return nil, err
 	}
 
@@ -34,7 +35,9 @@ func Decode(data []byte) (*APIRoot, error) {
 // be applied.
 // ----------------------------------------------------------------------
 
-/* Encode - This method is a simple wrapper for encoding an object into JSON */
+/*
+Encode - This method is a simple wrapper for encoding an object into JSON
+*/
 func (o *APIRoot) Encode() ([]byte, error) {
 	data, err := json.MarshalIndent(o, "", "    ")
 	if err != nil {
@@ -45,8 +48,10 @@ func (o *APIRoot) Encode() ([]byte, error) {
 	return data, nil
 }
 
-/* EncodeToString - This method is a simple wrapper for encoding an object into
-JSON */
+/*
+EncodeToString - This method is a simple wrapper for encoding an object into
+JSON
+*/
 func (o *APIRoot) EncodeToString() (string, error) {
 	data, err := o.Encode()
 	if err != nil {
