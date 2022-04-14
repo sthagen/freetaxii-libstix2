@@ -1,11 +1,11 @@
-// Copyright 2015-2020 Bret Jordan, All rights reserved.
+// Copyright 2015-2022 Bret Jordan, All rights reserved.
 //
 // Use of this source code is governed by an Apache 2.0 license that can be
 // found in the LICENSE file in the root of the source tree.
 
 package infrastructure
 
-import "github.com/freetaxii/libstix2/resources"
+import "github.com/freetaxii/libstix2/objects"
 
 // ----------------------------------------------------------------------
 // Public Methods
@@ -18,5 +18,5 @@ type and adds it to the infrastructure types property. The values SHOULD come
 from the infrastructure-type-ov open vocabulary.
 */
 func (o *Infrastructure) AddTypes(values interface{}) error {
-	return resources.AddValuesToList(&o.InfrastructureTypes, values)
+	return objects.AddValuesToList(&o.InfrastructureTypes, values)
 }

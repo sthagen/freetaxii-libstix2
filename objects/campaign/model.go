@@ -1,4 +1,4 @@
-// Copyright 2015-2020 Bret Jordan, All rights reserved.
+// Copyright 2015-2022 Bret Jordan, All rights reserved.
 //
 // Use of this source code is governed by an Apache 2.0 license that can be
 // found in the LICENSE file in the root of the source tree.
@@ -7,7 +7,6 @@ package campaign
 
 import (
 	"github.com/freetaxii/libstix2/objects"
-	"github.com/freetaxii/libstix2/objects/properties"
 )
 
 // ----------------------------------------------------------------------
@@ -22,11 +21,11 @@ properties.
 */
 type Campaign struct {
 	objects.CommonObjectProperties
-	properties.NameProperty
-	properties.DescriptionProperty
-	properties.AliasesProperty
-	properties.SeenProperties
-	Objective string `json:"objective,omitempty"`
+	objects.NameProperty
+	objects.DescriptionProperty
+	objects.AliasesProperty
+	objects.SeenProperties
+	Objective string `json:"objective,omitempty" bson:"objective,omitempty"`
 }
 
 /*

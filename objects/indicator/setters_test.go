@@ -1,4 +1,4 @@
-// Copyright 2015-2020 Bret Jordan, All rights reserved.
+// Copyright 2015-2022 Bret Jordan, All rights reserved.
 //
 // Use of this source code is governed by an Apache 2.0 license that can be
 // found in the LICENSE file in the root of the source tree.
@@ -7,7 +7,7 @@ package indicator
 
 import "testing"
 
-/* TestAddType - */
+// TestAddType -
 func TestAddType(t *testing.T) {
 	i := New()
 	want := "testData"
@@ -18,7 +18,7 @@ func TestAddType(t *testing.T) {
 	}
 }
 
-/* TestSetPattern - */
+// TestSetPattern -
 func TestSetPattern(t *testing.T) {
 	i := New()
 	want := "testData"
@@ -29,7 +29,7 @@ func TestSetPattern(t *testing.T) {
 	}
 }
 
-/* TestSetPatternType1 - */
+// TestSetPatternType1 -
 func TestSetPatternType1(t *testing.T) {
 	i := New()
 	want := ""
@@ -40,7 +40,7 @@ func TestSetPatternType1(t *testing.T) {
 	}
 }
 
-/* TestSetPatternType2 - */
+// TestSetPatternType2 -
 func TestSetPatternType2(t *testing.T) {
 	i := New()
 	want := "stix"
@@ -51,7 +51,7 @@ func TestSetPatternType2(t *testing.T) {
 	}
 }
 
-/* TestSetPatternVersion - */
+// TestSetPatternVersion -
 func TestSetPatternVersion(t *testing.T) {
 	i := New()
 	want := "testData"

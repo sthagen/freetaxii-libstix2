@@ -8,7 +8,7 @@ README files in each of the sub packages for more information. This API is built
 to support STIX 2.x and TAXII 2.x.
 
 ## Version
-0.6.1
+0.7.2
 
 ## Installation
 
@@ -114,7 +114,7 @@ func (o *CollectionsType) AddCollection(o *CollectionType) (int, error) {}
 func (o *ManifestType) AddManifestEntry(o *ManifestEntryType) (int, error) {}
 ```
 
-* Methods that create a new a new object inside another object and return a pointer to a slice location for the new object have a name of “New” + the object type in the singular. Example: “NewManifestEntry” is used to create a new Manifest Entry in the Objects slice in the Manifest resource. Some examples with full signatures:
+* Methods that create a new object inside another object and return a pointer to a slice location for the new object have a name of “New” + the object type in the singular. Example: “NewManifestEntry” is used to create a new Manifest Entry in the Objects slice in the Manifest resource. Some examples with full signatures:
 
 ```
 func (o *ExternalReferencesPropertyType) NewExternalReference() (*ExternalReferenceType, error) {}
@@ -138,5 +138,5 @@ This is free software, licensed under the Apache License, Version 2.0. [Read thi
 
 ## Copyright
 
-Copyright 2015-2020 Bret Jordan, All rights reserved.
+Copyright 2015-2022 Bret Jordan, All rights reserved.
 

@@ -1,4 +1,4 @@
-// Copyright 2015-2020 Bret Jordan, All rights reserved.
+// Copyright 2015-2022 Bret Jordan, All rights reserved.
 //
 // Use of this source code is governed by an Apache 2.0 license that can be
 // found in the LICENSE file in the root of the source tree.
@@ -27,7 +27,7 @@ func TestValid1(t *testing.T) {
 	m := New()
 	want := false
 
-	if got, err := m.Valid(); got != want {
+	if got, err := m.Valid(false); got != want {
 		t.Error("Fail UrlObject Object should be invalid when empty")
 		t.Log(err)
 	}
@@ -40,7 +40,7 @@ func TestValid2(t *testing.T) {
 
 	m.SetValue("https://example.com/research/index.html")
 
-	if got, err := m.Valid(); got != want {
+	if got, err := m.Valid(false); got != want {
 		t.Error("Fail UrlObject Object should be valid when required fields are not empty")
 		t.Log(err)
 	}

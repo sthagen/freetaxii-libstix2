@@ -1,4 +1,4 @@
-// Copyright 2015-2020 Bret Jordan, All rights reserved.
+// Copyright 2015-2022 Bret Jordan, All rights reserved.
 //
 // Use of this source code is governed by an Apache 2.0 license that can be
 // found in the LICENSE file in the root of the source tree.
@@ -7,7 +7,6 @@ package observeddata
 
 import (
 	"github.com/freetaxii/libstix2/objects"
-	"github.com/freetaxii/libstix2/objects/properties"
 )
 
 // ----------------------------------------------------------------------
@@ -22,11 +21,11 @@ individual properties.
 */
 type ObservedData struct {
 	objects.CommonObjectProperties
-	FirstObserved  string `json:"first_observed,omitempty"`
-	LastObserved   string `json:"last_observed,omitempty"`
-	NumberObserved int    `json:"number_observed,omitempty"`
-	Objects        string `json:"objects,omitempty"`
-	properties.ObjectRefsProperty
+	FirstObserved  string `json:"first_observed,omitempty" bson:"first_observed,omitempty"`
+	LastObserved   string `json:"last_observed,omitempty" bson:"last_observed,omitempty"`
+	NumberObserved int    `json:"number_observed,omitempty" bson:"number_observed,omitempty"`
+	Objects        string `json:"objects,omitempty" bson:"objects,omitempty"`
+	objects.ObjectRefsProperty
 }
 
 /*

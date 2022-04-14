@@ -1,4 +1,4 @@
-// Copyright 2015-2020 Bret Jordan, All rights reserved.
+// Copyright 2015-2022 Bret Jordan, All rights reserved.
 //
 // Use of this source code is governed by an Apache 2.0 license that can be
 // found in the LICENSE file in the root of the source tree.
@@ -20,27 +20,27 @@ func (o *AttackPattern) Compare(obj2 *AttackPattern) (bool, int, []string) {
 	resultDetails := make([]string, 0)
 
 	// Check common properties
-	_, pBase, dBase := o.CommonObjectProperties.Compare(&obj2.CommonObjectProperties)
+	_, pBase, dBase := o.CommonObjectProperties.Compare(&obj2.CommonObjectProperties, false)
 	problemsFound += pBase
 	resultDetails = append(resultDetails, dBase...)
 
 	// Check Name Property
-	_, pNames, dNames := o.NameProperty.Compare(&obj2.NameProperty)
+	_, pNames, dNames := o.NameProperty.Compare(&obj2.NameProperty, false)
 	problemsFound += pNames
 	resultDetails = append(resultDetails, dNames...)
 
 	// Check Description Property
-	_, pDescriptions, dDescriptions := o.DescriptionProperty.Compare(&obj2.DescriptionProperty)
+	_, pDescriptions, dDescriptions := o.DescriptionProperty.Compare(&obj2.DescriptionProperty, false)
 	problemsFound += pDescriptions
 	resultDetails = append(resultDetails, dDescriptions...)
 
 	// Check Aliases Property
-	_, pAliases, dAliases := o.AliasesProperty.Compare(&obj2.AliasesProperty)
+	_, pAliases, dAliases := o.AliasesProperty.Compare(&obj2.AliasesProperty, false)
 	problemsFound += pAliases
 	resultDetails = append(resultDetails, dAliases...)
 
 	// Check KillChainPhases Property
-	_, pKillChainPhases, dKillChainPhases := o.KillChainPhasesProperty.Compare(&obj2.KillChainPhasesProperty)
+	_, pKillChainPhases, dKillChainPhases := o.KillChainPhasesProperty.Compare(&obj2.KillChainPhasesProperty, false)
 	problemsFound += pKillChainPhases
 	resultDetails = append(resultDetails, dKillChainPhases...)
 

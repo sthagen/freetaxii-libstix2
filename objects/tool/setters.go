@@ -1,11 +1,11 @@
-// Copyright 2015-2020 Bret Jordan, All rights reserved.
+// Copyright 2015-2022 Bret Jordan, All rights reserved.
 //
 // Use of this source code is governed by an Apache 2.0 license that can be
 // found in the LICENSE file in the root of the source tree.
 
 package tool
 
-import "github.com/freetaxii/libstix2/resources"
+import "github.com/freetaxii/libstix2/objects"
 
 // ----------------------------------------------------------------------
 // Public Methods
@@ -18,7 +18,7 @@ adds it to the tool types property. The values SHOULD come from the
 tool-type-ov open vocabulary.
 */
 func (o *Tool) AddTypes(values interface{}) error {
-	return resources.AddValuesToList(&o.ToolTypes, values)
+	return objects.AddValuesToList(&o.ToolTypes, values)
 }
 
 /*

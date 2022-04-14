@@ -1,4 +1,4 @@
-// Copyright 2015-2020 Bret Jordan, All rights reserved.
+// Copyright 2015-2022 Bret Jordan, All rights reserved.
 //
 // Use of this source code is governed by an Apache 2.0 license that can be
 // found in the LICENSE file in the root of the source tree.
@@ -6,10 +6,10 @@
 package collections
 
 import (
-	"github.com/freetaxii/libstix2/objects/envelope"
-	"github.com/freetaxii/libstix2/objects/manifest"
-	"github.com/freetaxii/libstix2/objects/properties"
-	"github.com/freetaxii/libstix2/objects/versions"
+	"github.com/freetaxii/libstix2/objects"
+	"github.com/freetaxii/libstix2/objects/taxii/envelope"
+	"github.com/freetaxii/libstix2/objects/taxii/manifest"
+	"github.com/freetaxii/libstix2/objects/taxii/versions"
 )
 
 // ----------------------------------------------------------------------
@@ -74,9 +74,9 @@ type Collection struct {
 	Enabled     bool   `json:"-"`
 	Hidden      bool   `json:"-"`
 	Size        int    `json:"-"`
-	properties.IDProperty
-	properties.TitleProperty
-	properties.DescriptionProperty
+	objects.IDProperty
+	objects.TitleProperty
+	objects.DescriptionProperty
 	CanRead    bool     `json:"can_read"`
 	CanWrite   bool     `json:"can_write"`
 	MediaTypes []string `json:"media_types,omitempty"`
